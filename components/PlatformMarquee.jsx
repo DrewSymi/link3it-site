@@ -5,7 +5,7 @@
 // practice, never as partnership. Rendered as a seamless infinite marquee.
 
 const PLATFORMS = [
-  { name: "CyberArk", glyph: "shield" },
+  { name: "CyberArk · Idira", glyph: "shield" },
   { name: "Microsoft Entra ID", glyph: "hex" },
   { name: "Active Directory", glyph: "tree" },
   { name: "Okta", glyph: "ring" },

@@ -8,6 +8,9 @@ import AttackPath from "@/components/AttackPath";
 import CaseStudy from "@/components/CaseStudy";
 import Tiers from "@/components/Tiers";
 import ComplianceStrip from "@/components/ComplianceStrip";
+import BreachTimeline from "@/components/BreachTimeline";
+import ExposureAreas from "@/components/ExposureAreas";
+import BuiltFor from "@/components/BuiltFor";
 import Kinetic from "@/components/Kinetic";
 import Reveal from "@/components/Reveal";
 import { SectionHead, CTABand, Check } from "@/components/ui";
@@ -35,6 +38,9 @@ export default function Home() {
 
       {/* Bento grid — full-spectrum capabilities */}
       <BentoCapabilities />
+
+      {/* Identity exposure areas matrix */}
+      <ExposureAreas />
 
       {/* Problem narrative */}
       <section className="py-24 bg-base-black">
@@ -92,6 +98,22 @@ export default function Home() {
           <Reveal><AttackPath /></Reveal>
         </div>
       </section>
+
+      {/* How breaches actually happen — drawing timeline */}
+      <section className="py-24">
+        <div className="wrap">
+          <SectionHead
+            eyebrow="The Anatomy Of A Breach"
+            title="How breaches actually happen."
+            intro="Identity intrusions follow a chain. Each link is a control that can break it — and each is something a Link3IT review finds and closes."
+            center
+          />
+          <BreachTimeline />
+        </div>
+      </section>
+
+      {/* Built for complex environments */}
+      <BuiltFor />
 
       {/* Representative case study */}
       <CaseStudy />

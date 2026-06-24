@@ -31,7 +31,7 @@ export const metadata = {
     template: "%s — Link3IT",
   },
   description:
-    "Link3IT is an identity security specialist helping mid-market and enterprise organizations with CyberArk health checks, PAM deployment, Entra ID and Active Directory security reviews, identity governance, and Zero Trust.",
+    "Link3IT is an identity security specialist helping mid-market and enterprise organizations with CyberArk (Idira) health checks, PAM deployment, Entra ID and Active Directory security reviews, identity governance, and Zero Trust.",
   openGraph: {
     title: "Link3IT — Identity Security & Privileged Access Consulting",
     description: "Reduce identity risk. Bring privileged access under control. Start with a health check.",
@@ -60,7 +60,7 @@ const SCHEMA = {
     "Identity security and privileged access management consulting — CyberArk, Microsoft Entra ID, Active Directory, identity governance, and Zero Trust.",
   areaServed: { "@type": "Country", name: "United States" },
   knowsAbout: [
-    "Privileged Access Management", "CyberArk", "Microsoft Entra ID",
+    "Privileged Access Management", "CyberArk", "Idira", "Palo Alto Networks Identity Security", "Microsoft Entra ID",
     "Active Directory", "Identity Governance", "Zero Trust Architecture", "IAM Automation",
   ],
   email: SITE.email,

@@ -38,9 +38,9 @@ export default function BentoCapabilities() {
                 </div>
                 <h3 className="font-display text-[26px] font-medium mb-3">Privileged Access Management</h3>
                 <p className="text-ink-soft leading-relaxed max-w-[420px]">
-                  CyberArk vault, CPM rotation, PSM session isolation, and least-privilege safe design —
-                  deployed, hardened, and verified. The credentials that can end your business, brought
-                  fully under control.
+                  CyberArk — now Idira, part of Palo Alto Networks — vault, CPM rotation, PSM session
+                  isolation, and least-privilege safe design: deployed, hardened, and verified. The
+                  credentials that can end your business, brought fully under control.
                 </p>
               </div>
               <div className="relative-z flex flex-wrap gap-2 mt-6">

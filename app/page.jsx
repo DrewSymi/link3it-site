@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import PlatformMarquee from "@/components/PlatformMarquee";
+import PlatformGrid from "@/components/PlatformGrid";
 import CapabilityBand from "@/components/CapabilityBand";
 import BentoCapabilities from "@/components/BentoCapabilities";
 import LiveTerminal from "@/components/LiveTerminal";
@@ -34,7 +34,7 @@ export default function Home() {
       <Hero />
 
       {/* Platform marquee */}
-      <PlatformMarquee />
+      <PlatformGrid />
 
       {/* Animated capability band */}
       <CapabilityBand />

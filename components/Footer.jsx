@@ -60,6 +60,11 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} Link3IT — {SITE.legal}. All rights reserved.</span>
           <span>Independent Identity Security Advisory</span>
         </div>
+        <p className="mt-4 text-[11.5px] text-ink-faint/80 leading-relaxed max-w-[760px]">
+          All product and company names are trademarks™ or registered® trademarks of their respective holders.
+          Link3IT is an independent advisory and is not affiliated with, endorsed by, or a partner of any vendor
+          referenced on this site. Vendor and platform names indicate the technologies our engagements work across.
+        </p>
       </div>
     </footer>
   );

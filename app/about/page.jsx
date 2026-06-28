@@ -11,8 +11,8 @@ export const metadata = {
 // Verified-safe certifications only. Do not add unearned certs.
 const CERTS = [
   { name: "CyberArk Trustee", status: "Earned", tone: "green" },
-  { name: "CyberArk Defender (PAM)", status: "In Progress", tone: "amber" },
-  { name: "CompTIA Security+ (SY0-701)", status: "In Progress", tone: "amber" },
+  { name: "CyberArk Defender (PAM)", status: "Earned", tone: "green" },
+  { name: "CompTIA Security+ (SY0-701)", status: "Earned", tone: "green" },
 ];
 
 const VALUES = [

@@ -10,8 +10,8 @@ import Reveal from "@/components/Reveal";
 
 const CREDENTIALS = [
   { label: "CyberArk Trustee", note: "Earned" },
-  { label: "CyberArk Defender (PAM)", note: "In progress" },
-  { label: "CompTIA Security+", note: "In progress" },
+  { label: "CyberArk Defender (PAM)", note: "Earned" },
+  { label: "CompTIA Security+", note: "Earned" },
 ];
 
 export default function Principal({ photo = "/principal.jpg" }) {

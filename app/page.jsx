@@ -10,6 +10,7 @@ import Tiers from "@/components/Tiers";
 import ComplianceStrip from "@/components/ComplianceStrip";
 import BreachTimeline from "@/components/BreachTimeline";
 import ExposureAreas from "@/components/ExposureAreas";
+import EnvironmentSnapshot from "@/components/EnvironmentSnapshot";
 import BuiltFor from "@/components/BuiltFor";
 import Principal from "@/components/Principal";
 import RightSized from "@/components/RightSized";
@@ -43,6 +44,9 @@ export default function Home() {
 
       {/* Identity exposure areas matrix */}
       <ExposureAreas />
+
+      {/* Environment visibility dashboard showcase */}
+      <EnvironmentSnapshot />
 
       {/* Problem narrative */}
       <section className="py-24 bg-base-black">

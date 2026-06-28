@@ -46,6 +46,19 @@ export const metadata = {
     description: "Reduce identity risk. Bring privileged access under control.",
     images: ["/og-image.png"],
   },
+  alternates: {
+    canonical: SITE.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  // Paste the token from Google Search Console (HTML tag method) between the quotes.
+  // It looks like: "abcDEF123..." — just the content value, not the whole meta tag.
+  verification: {
+    google: "PASTE_GOOGLE_SEARCH_CONSOLE_TOKEN_HERE",
+  },
   icons: {
     icon:
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0a'/%3E%3Cpath d='M34 30 C34 21 43 19 51 20 C64 21 69 31 67 40 C65 48 57 50 50 50 C57 50 65 52 67 60 C69 69 64 79 51 80 C43 81 34 79 34 70' stroke='%235b8def' stroke-width='7.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='34' cy='29' r='4.6' fill='%237ba4f2'/%3E%3Ccircle cx='34' cy='71' r='4.6' fill='%237ba4f2'/%3E%3Ccircle cx='50' cy='50' r='9.5' fill='%2310e0a0'/%3E%3Cpath d='M45.5 50 L49 53.5 L55 47' stroke='%2304140d' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E",

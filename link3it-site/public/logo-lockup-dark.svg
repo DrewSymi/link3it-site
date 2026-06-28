@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="140" viewBox="0 0 560 140" fill="none">
+  <defs>
+    <linearGradient id="lk" x1="28" y1="20" x2="72" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5b8def"/><stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <radialGradient id="lkcore" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#16f0ad"/><stop offset="1" stop-color="#0a8a66"/>
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(24, 30)">
+    <rect width="80" height="80" rx="19" fill="#0a0a0a" stroke="#23262e"/>
+    <g transform="scale(0.8) translate(10,10)">
+      <path d="M34 30 C34 21 43 19 51 20 C64 21 69 31 67 40 C65 48 57 50 50 50 C57 50 65 52 67 60 C69 69 64 79 51 80 C43 81 34 79 34 70" stroke="url(#lk)" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="34" cy="29" r="4.6" fill="#7ba4f2"/>
+      <circle cx="34" cy="71" r="4.6" fill="#7ba4f2"/>
+      <circle cx="50" cy="50" r="13.5" fill="none" stroke="url(#lkcore)" stroke-width="1.6" opacity="0.5"/>
+      <circle cx="50" cy="50" r="9.5" fill="url(#lkcore)"/>
+      <path d="M45.5 50 L49 53.5 L55 47" stroke="#04140d" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <text x="124" y="64" font-family="DejaVu Serif, Georgia, serif" font-size="42" font-weight="bold" fill="#f5f7fa">Link<tspan fill="#5b8def">3</tspan>IT</text>
+  <text x="126" y="92" font-family="Inter, Arial, sans-serif" font-size="14.5" letter-spacing="0.16em" fill="#6b7480">IDENTITY SECURITY &amp; PRIVILEGED ACCESS</text>
+</svg>

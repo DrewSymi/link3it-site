@@ -12,7 +12,7 @@ const ENDPOINT = `https://formsubmit.co/ajax/${SITE.email}`;
 
 export default function ContactForm() {
   const [form, setForm] = useState({
-    name: "", email: "", company: "", size: "", interest: "", timeline: "", challenge: "", referredBy: "", _honey: "",
+    name: "", email: "", company: "", size: "", interest: "", stack: "", timeline: "", challenge: "", referredBy: "", _honey: "",
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle"); // idle | sending | sent | fallback
@@ -45,6 +45,7 @@ export default function ContactForm() {
       form.company && `Company: ${form.company}`,
       form.size && `Company size: ${form.size}`,
       form.interest && `Interest: ${form.interest}`,
+      form.stack && `Current PAM / directory stack: ${form.stack}`,
       form.timeline && `Timeline: ${form.timeline}`,
       form.referredBy && `Referred by: ${form.referredBy}`,
       "",
@@ -73,7 +74,8 @@ export default function ContactForm() {
     setStatus("sending");
     const payload = {
       Name: form.name, Email: form.email, Company: form.company,
-      "Company size": form.size, Interest: form.interest, Timeline: form.timeline,
+      "Company size": form.size, Interest: form.interest,
+      "Current PAM / directory stack": form.stack, Timeline: form.timeline,
       Challenge: form.challenge, "Referred by": form.referredBy,
       _subject: `New consultation request — ${form.company || form.name}`,
       _template: "table",
@@ -171,6 +173,14 @@ export default function ContactForm() {
             <option value="">Select…</option>
             <option>Immediate (0–30 days)</option><option>This quarter</option><option>This half</option><option>Exploring</option>
           </select>
+        </Field>
+      </div>
+
+      <div className="mt-4">
+        <Field id="cf-stack" label="Current PAM / directory stack (optional)">
+          <input id="cf-stack" type="text" className="field"
+                 placeholder="e.g. CyberArk/Idira, Entra ID, on-prem AD, Okta…"
+                 value={form.stack} onChange={(e) => set("stack", e.target.value)} />
         </Field>
       </div>
 

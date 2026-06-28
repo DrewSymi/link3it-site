@@ -11,6 +11,8 @@ import ComplianceStrip from "@/components/ComplianceStrip";
 import BreachTimeline from "@/components/BreachTimeline";
 import ExposureAreas from "@/components/ExposureAreas";
 import BuiltFor from "@/components/BuiltFor";
+import Principal from "@/components/Principal";
+import RightSized from "@/components/RightSized";
 import Kinetic from "@/components/Kinetic";
 import Reveal from "@/components/Reveal";
 import { SectionHead, CTABand, Check } from "@/components/ui";
@@ -118,6 +120,9 @@ export default function Home() {
       {/* Representative case study */}
       <CaseStudy />
 
+      {/* Who you work with — named principal */}
+      <Principal />
+
       {/* Compliance / framework alignment trust strip */}
       <ComplianceStrip />
 
@@ -151,6 +156,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SMB / startup on-ramp */}
+      <RightSized />
 
       {/* Tiered engagements */}
       <Tiers />

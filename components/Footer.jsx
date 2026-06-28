@@ -4,7 +4,7 @@ import { SITE, SERVICES } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-base-black border-t border-hair pt-20 pb-10">
+    <footer className="dark-zone flush bg-base-black border-t border-zone-hair pt-20 pb-10">
       <div className="wrap">
         {/* Authority statement */}
         <div className="pb-14 mb-12 border-b border-hair">

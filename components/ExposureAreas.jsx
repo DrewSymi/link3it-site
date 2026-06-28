@@ -26,7 +26,7 @@ const GROUPS = [
 
 export default function ExposureAreas() {
   return (
-    <section className="py-24 border-y border-hair bg-base-black/40">
+    <section className="py-24 border-y border-hair bg-base-panel2">
       <div className="wrap">
         <Reveal className="max-w-[680px] mb-12">
           <span className="eyebrow block mb-4">Identity Exposure Areas</span>

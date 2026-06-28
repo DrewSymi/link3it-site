@@ -65,7 +65,7 @@ export default function Nav() {
         <div className="flex items-center gap-4">
           <Link
             href="/contact"
-            className="hidden sm:inline-flex text-[14px] font-semibold text-white bg-cobalt px-[18px] py-[10px] rounded-lg hover:bg-cobalt-deep transition-colors"
+            className="hidden sm:inline-flex text-[14px] font-semibold text-white bg-coral px-[18px] py-[10px] rounded-lg hover:bg-coral-deep transition-colors"
           >
             Schedule Consultation
           </Link>

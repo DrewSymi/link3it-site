@@ -9,7 +9,7 @@ import { COMPLIANCE } from "@/lib/site";
 
 export default function ComplianceStrip() {
   return (
-    <section className="py-20 border-y border-hair bg-base-black/40">
+    <section className="py-20 border-y border-hair bg-base-panel2">
       <div className="wrap">
         <Reveal className="text-center max-w-[640px] mx-auto mb-10">
           <span className="eyebrow block mb-3">Built For Scrutiny</span>

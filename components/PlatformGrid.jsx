@@ -61,7 +61,7 @@ export default function PlatformGrid() {
 
         {/* framework strip */}
         <Reveal delay={120}>
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-xl border border-hair bg-base-black/30 px-5 py-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-xl border border-hair bg-base-panel2 px-5 py-4">
             <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted mr-1">Aligned to</span>
             {FRAMEWORKS.map((f, i) => (
               <span key={f} className="flex items-center gap-3">

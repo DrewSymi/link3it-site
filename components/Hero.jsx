@@ -3,12 +3,14 @@
 import Link from "next/link";
 import ScanConsole from "@/components/ScanConsole";
 import CursorGlow from "@/components/CursorGlow";
+import CircuitTree from "@/components/CircuitTree";
 import Magnetic from "@/components/Magnetic";
 
 export default function Hero() {
   return (
     <header className="relative pt-24 pb-20 md:pt-28 md:pb-28 overflow-hidden">
       <div className="hero-aura" aria-hidden="true" />
+      <div className="hero-tree" aria-hidden="true"><CircuitTree /></div>
       <CursorGlow />
 
       <div className="wrap relative-z grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
@@ -45,20 +47,27 @@ export default function Hero() {
         </div>
 
         <div className="hero-line" style={{ "--i": 3 }}>
-          <ScanConsole />
+          <div className="dark-zone p-4 shadow-card">
+            <ScanConsole />
+          </div>
         </div>
       </div>
 
       <style jsx>{`
         .hero-aura {
           position: absolute; top: -20%; right: -10%; width: 70%; height: 120%;
-          background: radial-gradient(ellipse 50% 50% at 60% 30%, rgba(37,99,235,0.18), transparent 65%);
+          background: radial-gradient(ellipse 50% 50% at 60% 30%, rgba(255,84,54,0.07), transparent 65%);
           pointer-events: none; z-index: 0; animation: auraFloat 12s ease-in-out infinite;
+        }
+        .hero-tree {
+          position: absolute; inset: 0; z-index: 0; pointer-events: none;
+          opacity: 0.85; mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 75%);
+          -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 75%);
         }
         @keyframes auraFloat { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-3%,3%) scale(1.08); } }
         @keyframes heroIn { 0% { opacity: 0; transform: translateY(22px); } 100% { opacity: 1; transform: translateY(0); } }
         .hero-line { opacity: 0; animation: heroIn 0.8s cubic-bezier(0.22,1,0.36,1) forwards; animation-delay: calc(var(--i) * 0.09s); }
-        @keyframes dotPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(16,224,160,0.5); } 50% { box-shadow: 0 0 0 5px rgba(16,224,160,0); } }
+        @keyframes dotPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(6,182,127,0.5); } 50% { box-shadow: 0 0 0 5px rgba(6,182,127,0); } }
         .hero-dot { animation: dotPulse 2.4s ease-in-out infinite; }
         @media (prefers-reduced-motion: reduce) {
           .hero-aura, .hero-line, .hero-dot { animation: none !important; opacity: 1 !important; transform: none !important; }

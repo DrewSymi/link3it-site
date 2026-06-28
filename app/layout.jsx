@@ -3,6 +3,7 @@ import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import AskLink3IT from "@/components/AskLink3IT";
 import { SITE } from "@/lib/site";
 
 const fraunces = Fraunces({
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
         <ScrollProgress />
         <main id="main" className="relative-z">{children}</main>
         <Footer />
+        <AskLink3IT />
       </body>
     </html>
   );

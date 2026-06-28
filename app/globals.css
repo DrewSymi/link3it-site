@@ -22,11 +22,11 @@
     font-size: 17px;
     line-height: 1.65;
     letter-spacing: -0.003em;
-    /* Layered SOC grid + cobalt aurora */
+    /* Subtle SOC grid + faint cobalt wash on light canvas */
     background-image:
-      linear-gradient(rgba(37, 99, 235, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(37, 99, 235, 0.035) 1px, transparent 1px),
-      radial-gradient(ellipse 90% 50% at 85% -10%, rgba(37, 99, 235, 0.12), transparent 60%);
+      linear-gradient(rgba(37, 99, 235, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37, 99, 235, 0.022) 1px, transparent 1px),
+      radial-gradient(ellipse 90% 50% at 85% -10%, rgba(255, 84, 54, 0.05), transparent 60%);
     background-size: 56px 56px, 56px 56px, 100% 100%;
     background-attachment: fixed;
   }
@@ -38,19 +38,8 @@
   }
 
   a { color: inherit; text-decoration: none; }
-  ::selection { @apply bg-cobalt text-white; }
+  ::selection { @apply bg-coral text-white; }
   :focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; border-radius: 4px; }
-
-  /* Subtle grain overlay for depth */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
 }
 
 @layer components {
@@ -58,7 +47,7 @@
   .prose-wrap { @apply mx-auto px-6 md:px-8; max-width: 760px; }
 
   .eyebrow {
-    @apply text-cobalt-bright font-semibold uppercase;
+    @apply text-coral font-semibold uppercase;
     font-size: 12px;
     letter-spacing: 0.14em;
   }
@@ -72,19 +61,20 @@
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
   }
   .btn:active { transform: scale(0.985); }
-  .btn-pri { @apply bg-cobalt text-white; }
-  .btn-pri:hover { @apply bg-cobalt-deep shadow-glow; transform: translateY(-1px); }
-  .btn-sec { @apply bg-transparent text-ink border border-hair; }
-  .btn-sec:hover { @apply border-cobalt-line bg-base-panel; }
+  .btn-pri { @apply bg-coral text-white; }
+  .btn-pri:hover { @apply bg-coral-deep shadow-glow; transform: translateY(-1px); }
+  .btn-sec { @apply bg-white text-ink border border-hair; }
+  .btn-sec:hover { @apply border-cobalt-line; background: #f4f3f0; }
   .btn-lg { padding: 16px 30px; font-size: 16px; }
   .btn-block { @apply w-full justify-center; }
 
   /* Cards */
   .card {
     @apply bg-base-panel border border-hair rounded-2xl;
-    transition: transform 0.25s var(--tw-ease, cubic-bezier(0.22,1,0.36,1)), border-color 0.25s;
+    box-shadow: 0 1px 2px rgba(15,17,21,0.04);
+    transition: transform 0.25s var(--tw-ease, cubic-bezier(0.22,1,0.36,1)), border-color 0.25s, box-shadow 0.25s;
   }
-  .card-hover:hover { @apply border-cobalt-line; transform: translateY(-3px); }
+  .card-hover:hover { @apply border-cobalt-line shadow-card; transform: translateY(-3px); }
 
   /* Section heading block */
   .shead-h {
@@ -101,7 +91,7 @@
 
   /* Form fields */
   .field {
-    @apply w-full rounded-lg border border-hair bg-base-panel text-ink outline-none;
+    @apply w-full rounded-lg border border-hair bg-white text-ink outline-none;
     padding: 12px 14px;
     font-size: 14.5px;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -119,19 +109,19 @@
 }
 
 /* ---- Article / blog prose styling ---- */
-.article-body { font-size: 17px; line-height: 1.75; color: #aab2bd; }
-.article-body h2 { font-family: var(--font-fraunces), Georgia, serif; font-size: 26px; font-weight: 500; color: #f5f7fa; margin: 2.2em 0 0.6em; line-height: 1.2; }
-.article-body h3 { font-family: var(--font-fraunces), Georgia, serif; font-size: 20px; font-weight: 500; color: #f5f7fa; margin: 1.8em 0 0.5em; }
+.article-body { font-size: 17px; line-height: 1.75; color: #3f4651; }
+.article-body h2 { font-family: var(--font-fraunces), Georgia, serif; font-size: 26px; font-weight: 500; color: #0f1115; margin: 2.2em 0 0.6em; line-height: 1.2; }
+.article-body h3 { font-family: var(--font-fraunces), Georgia, serif; font-size: 20px; font-weight: 500; color: #0f1115; margin: 1.8em 0 0.5em; }
 .article-body p { margin-bottom: 1.2em; }
-.article-body strong { color: #f5f7fa; font-weight: 600; }
+.article-body strong { color: #0f1115; font-weight: 600; }
 .article-body em { font-style: italic; }
-.article-body a { color: #5b8def; text-decoration: underline; text-underline-offset: 2px; }
-.article-body a:hover { color: #2563eb; }
-.article-body code { font-family: var(--font-mono), monospace; font-size: 0.88em; background: #15171c; border: 1px solid #23262e; border-radius: 4px; padding: 1px 6px; color: #7ba4f2; }
+.article-body a { color: #2563eb; text-decoration: underline; text-underline-offset: 2px; }
+.article-body a:hover { color: #ff5436; }
+.article-body code { font-family: var(--font-mono), monospace; font-size: 0.88em; background: #f4f3f0; border: 1px solid #e4e2dc; border-radius: 4px; padding: 1px 6px; color: #1d4ed8; }
 .article-body ul { list-style: none; margin: 1.2em 0; padding: 0; }
 .article-body li { position: relative; padding-left: 1.6em; margin-bottom: 0.6em; }
-.article-body li::before { content: "▸"; position: absolute; left: 0; color: #2563eb; }
-.article-body blockquote { border-left: 3px solid #2563eb; padding: 0.4em 0 0.4em 1.4em; margin: 1.6em 0; font-family: var(--font-fraunces), Georgia, serif; font-size: 20px; font-style: italic; color: #f5f7fa; line-height: 1.5; }
+.article-body li::before { content: "▸"; position: absolute; left: 0; color: #ff5436; }
+.article-body blockquote { border-left: 3px solid #ff5436; padding: 0.4em 0 0.4em 1.4em; margin: 1.6em 0; font-family: var(--font-fraunces), Georgia, serif; font-size: 20px; font-style: italic; color: #0f1115; line-height: 1.5; }
 .article-body blockquote p { margin-bottom: 0.4em; }
 
 /* ============================================================
@@ -174,7 +164,7 @@
 .btn-pri:hover::after { left: 140%; }
 
 /* Animated section divider line */
-.rule-draw { position: relative; height: 1px; background: #23262e; overflow: hidden; }
+.rule-draw { position: relative; height: 1px; background: #e4e2dc; overflow: hidden; }
 .rule-draw::after {
   content: ""; position: absolute; inset: 0; width: 40%;
   background: linear-gradient(90deg, transparent, #2563eb, transparent);
@@ -196,3 +186,35 @@
 @media (prefers-reduced-motion: reduce) {
   .card-shine::before, .btn-pri::after, .rule-draw::after, .text-gradient, .floaty { animation: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   DARK ZONE — cinematic console panels on the light page.
+   Wrap any section that should stay dark in className="dark-zone".
+   Token utilities are remapped to dark values within the zone so
+   existing components keep working without per-element edits.
+   ============================================================ */
+.dark-zone {
+  background: #0a0a0a;
+  color: #aab2bd;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.dark-zone.flush { border-radius: 0; }
+.dark-zone .text-ink { color: #f5f7fa !important; }
+.dark-zone .text-ink-soft { color: #aab2bd !important; }
+.dark-zone .text-ink-muted { color: #828b98 !important; }
+.dark-zone .text-ink-faint { color: #5a626e !important; }
+.dark-zone .bg-base { background-color: #0a0a0a !important; }
+.dark-zone .bg-base-panel { background-color: #101114 !important; }
+.dark-zone .bg-base-panel2 { background-color: #15171c !important; }
+.dark-zone .bg-base-black { background-color: #000 !important; }
+.dark-zone .border-hair { border-color: #23262e !important; }
+.dark-zone .border-base { border-color: #0a0a0a !important; }
+.dark-zone .card { background-color: #101114 !important; border-color: #23262e !important; box-shadow: none !important; }
+.dark-zone .field { background-color: #15171c !important; border-color: #23262e !important; color: #f5f7fa !important; }
+.dark-zone .btn-sec { background: transparent !important; color: #f5f7fa !important; border-color: #23262e !important; }
+.dark-zone .shead-h { color: #f5f7fa !important; }
+/* cobalt-bright reads brighter on dark */
+.dark-zone .text-cobalt-bright { color: #5b8def !important; }
+.dark-zone .text-signal-emerald { color: #10e0a0 !important; }

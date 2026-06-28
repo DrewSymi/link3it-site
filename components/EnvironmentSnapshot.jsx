@@ -42,7 +42,7 @@ export default function EnvironmentSnapshot() {
   }, []);
 
   return (
-    <section className="py-24 border-y border-hair bg-base-panel" ref={ref}>
+    <section className="py-24 border-y border-hair" ref={ref}>
       <div className="wrap">
         <Reveal className="max-w-[700px] mb-12">
           <span className="eyebrow block mb-4">See Your Environment Clearly</span>
@@ -54,6 +54,7 @@ export default function EnvironmentSnapshot() {
           </p>
         </Reveal>
 
+        <div className="dark-zone p-5 md:p-6">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-5">
           {/* Posture panel */}
           <Reveal>
@@ -110,6 +111,7 @@ export default function EnvironmentSnapshot() {
               </div>
             </div>
           </Reveal>
+        </div>
         </div>
 
         <Reveal className="mt-6">

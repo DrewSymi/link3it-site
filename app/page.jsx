@@ -49,7 +49,7 @@ export default function Home() {
       <EnvironmentSnapshot />
 
       {/* Problem narrative */}
-      <section className="py-24 bg-base-black">
+      <section className="py-24 bg-base-panel2">
         <div className="wrap">
           <SectionHead
             eyebrow="The Identity Problem"
@@ -58,8 +58,8 @@ export default function Home() {
           />
           <div className="grid md:grid-cols-3 gap-10">
             {PROBLEMS.map((p, i) => (
-              <Reveal key={p.n} delay={i * 80} className="border-t-2 border-white/15 pt-6">
-                <div className="font-display text-[15px] font-semibold text-cobalt-bright mb-4">{p.n}</div>
+              <Reveal key={p.n} delay={i * 80} className="border-t-2 border-coral/40 pt-6">
+                <div className="font-display text-[15px] font-semibold text-coral mb-4">{p.n}</div>
                 <h3 className="text-[19px] mb-2">{p.h}</h3>
                 <p className="text-[14.5px] text-ink-muted leading-relaxed">{p.p}</p>
               </Reveal>
@@ -88,20 +88,22 @@ export default function Home() {
             </ul>
           </Reveal>
           <Reveal delay={120}>
-            <LiveTerminal />
+            <div className="dark-zone p-4">
+              <LiveTerminal />
+            </div>
           </Reveal>
         </div>
       </section>
 
       {/* Interactive attack path */}
-      <section className="py-24 bg-base-panel border-y border-hair">
+      <section className="py-24 bg-base-panel2 border-y border-hair">
         <div className="wrap">
           <SectionHead
             eyebrow="The Threat, Visualized"
             title="See exactly where the chain breaks."
             intro="Click through how a real intrusion escalates — and the specific control that stops it at each stage."
           />
-          <Reveal><AttackPath /></Reveal>
+          <Reveal><div className="dark-zone p-5 md:p-7"><AttackPath /></div></Reveal>
         </div>
       </section>
 

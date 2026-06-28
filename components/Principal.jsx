@@ -31,7 +31,7 @@ export default function Principal({ photo = "/principal.jpg" }) {
           {/* Portrait / placeholder */}
           <Reveal>
             <div className="card overflow-hidden">
-              <div className="aspect-[4/5] relative bg-gradient-to-br from-base-panel2 to-base-black flex items-center justify-center">
+              <div className="aspect-[4/5] relative bg-gradient-to-br from-base-panel2 to-hair flex items-center justify-center">
                 {/* Drop a real photo at public/principal.jpg and it replaces this automatically */}
                 <img
                   src={photo}

@@ -3,14 +3,14 @@
 import Link from "next/link";
 import ScanConsole from "@/components/ScanConsole";
 import CursorGlow from "@/components/CursorGlow";
-import CircuitTree from "@/components/CircuitTree";
+import IdentityField from "@/components/IdentityField";
 import Magnetic from "@/components/Magnetic";
 
 export default function Hero() {
   return (
     <header className="relative pt-24 pb-20 md:pt-28 md:pb-28 overflow-hidden">
       <div className="hero-aura" aria-hidden="true" />
-      <div className="hero-tree" aria-hidden="true"><CircuitTree /></div>
+      <div className="hero-tree" aria-hidden="true"><IdentityField /></div>
       <CursorGlow />
 
       <div className="wrap relative-z grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-line" style={{ "--i": 3 }}>
-          <div className="dark-zone p-4 shadow-card">
+          <div className="shadow-lift rounded-2xl">
             <ScanConsole />
           </div>
         </div>
@@ -60,9 +60,10 @@ export default function Hero() {
           pointer-events: none; z-index: 0; animation: auraFloat 12s ease-in-out infinite;
         }
         .hero-tree {
-          position: absolute; inset: 0; z-index: 0; pointer-events: none;
-          opacity: 0.85; mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 75%);
-          -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 30%, transparent 75%);
+          position: absolute; top: 0; bottom: 0; left: 28%; right: -6%; z-index: 0; pointer-events: none;
+          opacity: 0.9;
+          mask-image: radial-gradient(ellipse 80% 75% at 70% 50%, rgba(0,0,0,1) 35%, transparent 78%);
+          -webkit-mask-image: radial-gradient(ellipse 80% 75% at 70% 50%, rgba(0,0,0,1) 35%, transparent 78%);
         }
         @keyframes auraFloat { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-3%,3%) scale(1.08); } }
         @keyframes heroIn { 0% { opacity: 0; transform: translateY(22px); } 100% { opacity: 1; transform: translateY(0); } }

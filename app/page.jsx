@@ -88,9 +88,7 @@ export default function Home() {
             </ul>
           </Reveal>
           <Reveal delay={120}>
-            <div className="dark-zone p-4">
-              <LiveTerminal />
-            </div>
+            <LiveTerminal />
           </Reveal>
         </div>
       </section>
@@ -103,7 +101,7 @@ export default function Home() {
             title="See exactly where the chain breaks."
             intro="Click through how a real intrusion escalates — and the specific control that stops it at each stage."
           />
-          <Reveal><div className="dark-zone p-5 md:p-7"><AttackPath /></div></Reveal>
+          <Reveal><AttackPath /></Reveal>
         </div>
       </section>
 

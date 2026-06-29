@@ -26,7 +26,7 @@ const FINDINGS = [
 function Bar({ pct, tone }) {
   const color = tone === "red" ? "#dc2626" : tone === "amber" ? "#e8852f" : "#5b8def";
   return (
-    <div style={{ height: 6, borderRadius: 99, background: "#11141b", overflow: "hidden" }}>
+    <div style={{ height: 6, borderRadius: 99, background: "#eeece6", overflow: "hidden" }}>
       <div style={{ height: "100%", width: `${pct}%`, borderRadius: 99, background: color, transition: "width 1s cubic-bezier(.22,1,.36,1)" }} />
     </div>
   );
@@ -54,7 +54,6 @@ export default function EnvironmentSnapshot() {
           </p>
         </Reveal>
 
-        <div className="dark-zone p-5 md:p-6">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-5">
           {/* Posture panel */}
           <Reveal>
@@ -101,7 +100,7 @@ export default function EnvironmentSnapshot() {
                   <div key={f.title} className="flex gap-3.5 items-start pb-3 border-b border-hair last:border-0 last:pb-0"
                        style={{ opacity: on ? 1 : 0, transform: on ? "none" : "translateX(8px)", transition: `all .5s ${i * 90}ms` }}>
                     <span className="font-mono text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded shrink-0 mt-0.5"
-                          style={{ color: f.color, background: "rgba(255,255,255,0.04)", border: `1px solid ${f.color}33` }}>{f.sev}</span>
+                          style={{ color: f.color, background: `${f.color}10`, border: `1px solid ${f.color}33` }}>{f.sev}</span>
                     <div>
                       <div className="text-[14.5px] text-ink font-medium leading-snug">{f.title}</div>
                       <div className="text-[13px] text-ink-muted mt-0.5 leading-snug">{f.note}</div>
@@ -111,7 +110,6 @@ export default function EnvironmentSnapshot() {
               </div>
             </div>
           </Reveal>
-        </div>
         </div>
 
         <Reveal className="mt-6">

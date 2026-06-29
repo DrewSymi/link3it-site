@@ -97,7 +97,7 @@ export default function AttackPath() {
 
       {/* detail */}
       <div className="grid md:grid-cols-2 gap-4" key={sel}>
-        <div className="ap-fade rounded-xl border border-hair bg-base-black/30 p-5">
+        <div className="ap-fade rounded-xl border border-hair bg-base-panel2 p-5">
           <div className="flex items-center gap-2 mb-2">
             <span className={`text-[10px] font-bold tracking-wide px-2 py-0.5 rounded border ${SEV[stage.sev].chip}`}>ATTACKER</span>
             <span className="text-[11px] text-ink-muted font-mono">stage {sel + 1}/5</span>

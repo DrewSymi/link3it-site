@@ -57,7 +57,7 @@ export default function LiveTerminal() {
   return (
     <div ref={boxRef} className="term card overflow-hidden">
       {/* title bar */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-hair bg-base-black/40">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-hair bg-base-panel2">
         <span className="w-3 h-3 rounded-full bg-signal-red/70" />
         <span className="w-3 h-3 rounded-full bg-signal-amber/70" />
         <span className="w-3 h-3 rounded-full bg-signal-green/70" />
@@ -84,7 +84,7 @@ export default function LiveTerminal() {
       </div>
 
       <style jsx>{`
-        .term { background: linear-gradient(180deg, #0c0e12, #0a0a0a); }
+        .term { background: #ffffff; }
         .term-line { animation: termIn 0.4s ease both; }
         @keyframes termIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         .term-blink { animation: blink 1.1s steps(2) infinite; }

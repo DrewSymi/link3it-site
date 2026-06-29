@@ -73,7 +73,7 @@ export default function ScanConsole() {
   return (
     <div ref={ref} className="term card overflow-hidden">
       {/* title bar */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-hair bg-base-black/40">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-hair bg-base-panel2">
         <span className="w-3 h-3 rounded-full bg-signal-red/70" />
         <span className="w-3 h-3 rounded-full bg-signal-amber/70" />
         <span className="w-3 h-3 rounded-full bg-signal-green/70" />
@@ -110,7 +110,7 @@ export default function ScanConsole() {
                 <span className="text-[11px] uppercase tracking-[0.12em] text-ink-muted">Identity attack surface</span>
                 <span className="font-display text-[26px] font-semibold text-signal-amber leading-none">{surface}%</span>
               </div>
-              <div className="h-2.5 rounded-full bg-base-black overflow-hidden">
+              <div className="h-2.5 rounded-full bg-base-panel2 overflow-hidden">
                 <div className="h-full rounded-full bg-gradient-to-r from-signal-amber to-signal-red transition-[width] duration-100"
                      style={{ width: `${surface}%` }} />
               </div>
@@ -134,7 +134,7 @@ export default function ScanConsole() {
       </div>
 
       <style jsx>{`
-        .term { background: linear-gradient(180deg, #0c0e12, #0a0a0a); }
+        .term { background: #ffffff; }
         .term-line { animation: termIn 0.4s ease both; }
         @keyframes termIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
         .term-reveal { animation: termIn 0.5s ease both; }

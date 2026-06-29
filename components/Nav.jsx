@@ -33,7 +33,7 @@ export default function Nav() {
   return (
     <nav
       className={`sticky top-0 z-50 backdrop-blur-md transition-colors duration-300 ${
-        scrolled ? "bg-base/90 border-b border-hair" : "bg-base/70 border-b border-transparent"
+        scrolled ? "bg-base/95 border-b border-hair" : "bg-base/90 border-b border-hair/60"
       }`}
       aria-label="Primary"
     >

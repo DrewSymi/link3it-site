@@ -65,6 +65,8 @@
   .btn-pri:hover { @apply bg-coral-deep shadow-glow; transform: translateY(-1px); }
   .btn-sec { @apply bg-white text-ink border border-hair; }
   .btn-sec:hover { @apply border-cobalt-line; background: #f4f3f0; }
+  .btn-ghost-light { background: transparent; color: #f7f8fb; border: 1px solid rgba(255,255,255,0.22); }
+  .btn-ghost-light:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); transform: translateY(-1px); }
   .btn-lg { padding: 16px 30px; font-size: 16px; }
   .btn-block { @apply w-full justify-center; }
 

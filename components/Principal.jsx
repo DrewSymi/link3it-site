@@ -32,14 +32,7 @@ export default function Principal({ photo = "/principal.jpg" }) {
           <Reveal>
             <div className="card overflow-hidden">
               <div className="aspect-[4/5] relative bg-gradient-to-br from-base-panel2 to-hair flex items-center justify-center">
-                {/* Drop a real photo at public/principal.jpg and it replaces this automatically */}
-                <img
-                  src={photo}
-                  alt="Andrew Symister, Founder & Principal Advisor"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onError={(e) => { e.currentTarget.style.display = "none"; }}
-                />
-                {/* monogram fallback sits behind the img */}
+                {/* Professional headshot pending — clean monogram placeholder for now */}
                 <div className="text-center px-6 pointer-events-none">
                   <div className="font-display text-[64px] font-semibold text-cobalt-bright/30 leading-none">AS</div>
                   <div className="text-[12px] text-ink-faint mt-3 uppercase tracking-[0.14em]">Principal Advisor</div>
